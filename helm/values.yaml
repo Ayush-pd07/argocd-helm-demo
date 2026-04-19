@@ -1,8 +1,9 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: latest
+  repository: ayushpan19/sample-app
+  tag: "latest"
+  pullPolicy: Always
 
 service:
   type: NodePort
