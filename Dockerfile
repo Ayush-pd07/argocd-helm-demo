@@ -1,7 +1,2 @@
-FROM eclipse-temurin:17-jdk-jammy
-
-WORKDIR /app
-
-COPY . .
-
-CMD ["sh", "-c", "echo Docker image built successfully"]
+FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/index.html

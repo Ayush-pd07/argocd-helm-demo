@@ -1,0 +1,15 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: sample-app-updater
+  namespace: argocd-image-updater
+spec:
+  application:
+    name: sample-app
+    namespace: argocd
+  images:
+    - name: ayushpan19/sample-app
+      alias: image
+      updateStrategy:
+        type: latest
+
